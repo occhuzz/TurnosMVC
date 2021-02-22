@@ -1,0 +1,57 @@
+@model Turnos.Models.Medico
+
+<h4>Médico</h4>
+<hr/>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card hoverable blue lighten-4">
+            <div class="card-content">
+                <span class="card-title">
+                    <h5><b>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</b>
+                    </h5>
+                </span>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre): @Html.DisplayFor(model => model.Nombre)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apellido): @Html.DisplayFor(model => model.Apellido)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Direccion): @Html.DisplayFor(model => model.Direccion)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MedicoEspecialidad[0].Especialidad): @Html.DisplayFor(model =>
+                    model.MedicoEspecialidad[0].Especialidad.Descripcion)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.HorarioAtencionDesde): @Html.DisplayFor(model =>
+                    model.HorarioAtencionDesde)
+                </dt>
+                <hr/>
+                <dt>
+                    @Html.DisplayNameFor(model => model.HorarioAtencionHasta): @Html.DisplayFor(model =>
+                    model.HorarioAtencionHasta)
+                </dt>
+
+            </div>
+            <div class="card-action light-blue darken-4">
+                <form>
+                    <input type="hidden" asp-for="IdMedico" />
+
+                    <a asp-action="Edit" asp-route-id="@Model.IdMedico">Editar</a>
+                    <a asp-action="Index" class="right">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+@model IEnumerable<Turnos.Models.Paciente>
+
+<p>
+    <a asp-action="Create" class="pink darken-3 btn-floating btn-large"><i class="material-icons">add_reaction</i></a>
+</p>
+
+<table class="responsive-table highlight z-depth-3 deep-purple lighten-5">
+    <thead class="pink darken-3 white-text">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdPaciente"> <i class="material-icons">edit</i></a> 
+                    <a asp-action="Details" asp-route-id="@item.IdPaciente"><i class="material-icons grey-text">visibility</i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.IdPaciente"><i class="material-icons red-text">delete</i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

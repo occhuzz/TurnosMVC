@@ -1,0 +1,37 @@
+@model IEnumerable<Turnos.Models.Especialidad>
+
+<div class="row">
+    <div class="col l6 offset-l3 s12">
+        <p>
+            <a asp-action="Create" class="light-green darken-3 btn-floating btn-large"><i
+            class="material-icons">person_add</i></a>
+        </p>
+
+        <table class="responsive-table highlight z-depth-3">
+            <thead class="light-green darken-3 white-text">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descripcion)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="row">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                        </td>
+                        <td class="right">
+                            <a asp-action="Edit" asp-route-id="@item.IdEspecialidad"> <i class="material-icons">edit</i></a>
+                            <a asp-action="Delete" asp-route-id="@item.IdEspecialidad"><i
+                                    class="material-icons red-text">delete</i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
