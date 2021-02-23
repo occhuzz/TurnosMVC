@@ -21,3 +21,11 @@
 <h2>Pantalla Médico</h2>
 
 <a href="https://ibb.co/gWsCn4V"><img src="https://i.ibb.co/qgbwZJ5/imagen-2021-02-23-131635.png" alt="imagen-2021-02-23-131635" border="0"></a>
+
+<h2>Pantalla Editar</h2>
+
+<a href="https://ibb.co/NWNPFFx"><img src="https://i.ibb.co/QYHRJJ9/imagen-2021-02-23-155443.png" alt="imagen-2021-02-23-155443" border="0"></a>
+
+<h2>Pantalla Crear</h2>
+
+<a href="https://ibb.co/0Q8PgPQ"><img src="https://i.ibb.co/9GzRFRG/imagen-2021-02-23-155558.png" alt="imagen-2021-02-23-155558" border="0"></a>
